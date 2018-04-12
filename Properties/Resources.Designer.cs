@@ -63,9 +63,9 @@ namespace SyphilisRegister.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Syphilis1200x750 {
+        internal static System.Drawing.Bitmap spiration_light {
             get {
-                object obj = ResourceManager.GetObject("Syphilis1200x750", resourceCulture);
+                object obj = ResourceManager.GetObject("spiration-light", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

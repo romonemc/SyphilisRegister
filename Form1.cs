@@ -39,12 +39,15 @@ namespace SyphilisRegister
 
         private void dgvPatients_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            RID = Convert.ToInt32(dgvPatients.SelectedRows[0].Cells["RecordID"].Value);
-            DNO = Convert.ToInt32(dgvPatients.SelectedRows[0].Cells["DocketNo"].Value);
+            if (e.RowIndex != dgvPatients.NewRowIndex)
+            {
+                RID = Convert.ToInt32(dgvPatients.SelectedRows[0].Cells["RecordID"].Value);
+                DNO = Convert.ToInt32(dgvPatients.SelectedRows[0].Cells["DocketNo"].Value);
 
-            this.testTableAdapter.FillWithTestData(this.syphilisDBDataSet.Test, RID);
-            this.treatment_DateTableAdapter.FillWithTreatmentDates(syphilisDBDataSet.Treatment_Date, RID);
-            this.post_Treatment_TrustTableAdapter.FillWithPOSTData(syphilisDBDataSet.Post_Treatment_Trust, RID);
+                this.testTableAdapter.FillWithTestData(this.syphilisDBDataSet.Test, RID);
+                this.treatment_DateTableAdapter.FillWithTreatmentDates(syphilisDBDataSet.Treatment_Date, RID);
+                this.post_Treatment_TrustTableAdapter.FillWithPOSTData(syphilisDBDataSet.Post_Treatment_Trust, RID);
+            }
         }
 
         // ----------------------------------------------------------------------------------
@@ -56,22 +59,28 @@ namespace SyphilisRegister
 
         private void SaveGridData(string Grid)
         {
-            switch (Grid)
+            try
             {
-                case "Patient":
-                    patientTableAdapter.Update(LastPatientRow);
-                    break;
-                case "Tests":
-                    testTableAdapter.Update(LastTestRow);
-                    break;
-                case "Treatment":
-                    treatment_DateTableAdapter.Update(LastTreatmentRow);
-                    break;
-                case "POST Treatment":
-                    post_Treatment_TrustTableAdapter.Update(LastPOSTRow);
-                    break;
+                switch (Grid)
+                {
+                    case "Patient":
+                        patientTableAdapter.Update(LastPatientRow);
+                        break;
+                    case "Tests":
+                        testTableAdapter.Update(LastTestRow);
+                        break;
+                    case "Treatment":
+                        treatment_DateTableAdapter.Update(LastTreatmentRow);
+                        break;
+                    case "POST Treatment":
+                        post_Treatment_TrustTableAdapter.Update(LastPOSTRow);
+                        break;
+                }
             }
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot save record, please try again or contact your system administrator." + Environment.NewLine + "Details: " + ex.Message, "Error saving record", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+            }
         }
 
         private void patientBindingSource_PositionChanged(object sender, EventArgs e)
@@ -93,6 +102,10 @@ namespace SyphilisRegister
             }
 
             LastPatientRow = thisRow;
+
+            dgvTests.Enabled = true;
+            dgvTreatmentDates.Enabled = true;
+            dgvPostTreatmentTrust.Enabled = true;
         }
 
         private void testBindingSource_PositionChanged(object sender, EventArgs e)
@@ -195,6 +208,51 @@ namespace SyphilisRegister
                 {
                     e.Row.Cells["POSTDate"].Value = DateTime.Today.ToShortDateString();
                 }
+            }
+        }
+
+        private void dgvPatients_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            DataGridView grids = (DataGridView)sender;
+
+            switch (grids.Name)
+            {
+                case "dgvPatients":
+                    dgvTests.Enabled = false;
+                    dgvTreatmentDates.Enabled = false;
+                    dgvPostTreatmentTrust.Enabled = false;
+                    break;
+                case "dgvTests":
+                    dgvPatients.Enabled = false;
+                    dgvTreatmentDates.Enabled = false;
+                    dgvPostTreatmentTrust.Enabled = false;
+                    break;
+                case "dgvTreatmentDates":
+                    dgvTests.Enabled = false;
+                    dgvPatients.Enabled = false;
+                    dgvPostTreatmentTrust.Enabled = false;
+                    break;
+                case "dgvPostTreatmentTrust":
+                    dgvTests.Enabled = false;
+                    dgvTreatmentDates.Enabled = false;
+                    dgvPatients.Enabled = false;
+                    break;
+            }
+        }
+
+        private void dgvPatients_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvPatients.Enabled = true;
+            dgvTests.Enabled = true;
+            dgvTreatmentDates.Enabled = true;
+            dgvPostTreatmentTrust.Enabled = true;
+        }
+
+        private void dgvTests_Enter(object sender, EventArgs e)
+        {
+            if (dgvPatients.SelectedRows[0].IsNewRow || dgvPatients.SelectedRows[0].Cells[0].Value is DBNull)
+            {
+                MessageBox.Show("Please select an existing patient first.", "Select Patient First", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

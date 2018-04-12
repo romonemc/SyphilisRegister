@@ -29,22 +29,54 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvPostTreatmentTrust = new System.Windows.Forms.DataGridView();
+            this.POSTDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pTResultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.POSTDocketNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.POSTRecordID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.post_Treatment_TrustBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.syphilisDBDataSet = new SyphilisRegister.SyphilisDBDataSet();
             this.dgvTreatmentDates = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TreatmentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TreatmentDocketNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TreatmentRecordNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treatment_DateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvTests = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateTested = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TestDocketNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TestRecordID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.testBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvPatients = new System.Windows.Forms.DataGridView();
+            this.DocketNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RecordID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,51 +85,21 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateTested = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DocketNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.syphilisDBDataSet = new SyphilisRegister.SyphilisDBDataSet();
-            this.POSTDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pTResultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.POSTDocketNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.POSTRecordID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.post_Treatment_TrustBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.treatment_DateBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TestDocketNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TestRecordID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.testBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.patientTableAdapter = new SyphilisRegister.SyphilisDBDataSetTableAdapters.PatientTableAdapter();
             this.testTableAdapter = new SyphilisRegister.SyphilisDBDataSetTableAdapters.TestTableAdapter();
             this.tableAdapterManager = new SyphilisRegister.SyphilisDBDataSetTableAdapters.TableAdapterManager();
             this.treatment_DateTableAdapter = new SyphilisRegister.SyphilisDBDataSetTableAdapters.Treatment_DateTableAdapter();
             this.post_Treatment_TrustTableAdapter = new SyphilisRegister.SyphilisDBDataSetTableAdapters.Post_Treatment_TrustTableAdapter();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TreatmentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TreatmentDocketNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TreatmentRecordNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPostTreatmentTrust)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.post_Treatment_TrustBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syphilisDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTreatmentDates)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treatment_DateBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.syphilisDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.post_Treatment_TrustBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treatment_DateBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -131,14 +133,14 @@
             this.POSTDocketNo,
             this.POSTRecordID});
             this.dgvPostTreatmentTrust.DataSource = this.post_Treatment_TrustBindingSource;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPostTreatmentTrust.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPostTreatmentTrust.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPostTreatmentTrust.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvPostTreatmentTrust.Location = new System.Drawing.Point(9, 432);
             this.dgvPostTreatmentTrust.Name = "dgvPostTreatmentTrust";
@@ -146,7 +148,56 @@
             this.dgvPostTreatmentTrust.RowHeadersWidth = 20;
             this.dgvPostTreatmentTrust.Size = new System.Drawing.Size(400, 165);
             this.dgvPostTreatmentTrust.TabIndex = 6;
+            this.dgvPostTreatmentTrust.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvPatients_CellBeginEdit);
+            this.dgvPostTreatmentTrust.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPatients_CellEndEdit);
             this.dgvPostTreatmentTrust.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvTests_DefaultValuesNeeded);
+            this.dgvPostTreatmentTrust.Enter += new System.EventHandler(this.dgvTests_Enter);
+            // 
+            // POSTDate
+            // 
+            this.POSTDate.DataPropertyName = "PT Date";
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.POSTDate.DefaultCellStyle = dataGridViewCellStyle1;
+            this.POSTDate.HeaderText = "Date";
+            this.POSTDate.Name = "POSTDate";
+            // 
+            // pTResultDataGridViewTextBoxColumn
+            // 
+            this.pTResultDataGridViewTextBoxColumn.DataPropertyName = "PT Result";
+            this.pTResultDataGridViewTextBoxColumn.HeaderText = "Result";
+            this.pTResultDataGridViewTextBoxColumn.Name = "pTResultDataGridViewTextBoxColumn";
+            // 
+            // commentsDataGridViewTextBoxColumn
+            // 
+            this.commentsDataGridViewTextBoxColumn.DataPropertyName = "Comments";
+            this.commentsDataGridViewTextBoxColumn.HeaderText = "Comments";
+            this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
+            // 
+            // POSTDocketNo
+            // 
+            this.POSTDocketNo.DataPropertyName = "Docket No";
+            this.POSTDocketNo.HeaderText = "Docket No";
+            this.POSTDocketNo.Name = "POSTDocketNo";
+            this.POSTDocketNo.Visible = false;
+            // 
+            // POSTRecordID
+            // 
+            this.POSTRecordID.DataPropertyName = "RecordID";
+            this.POSTRecordID.HeaderText = "RecordID";
+            this.POSTRecordID.Name = "POSTRecordID";
+            this.POSTRecordID.Visible = false;
+            // 
+            // post_Treatment_TrustBindingSource
+            // 
+            this.post_Treatment_TrustBindingSource.DataMember = "Post Treatment Trust";
+            this.post_Treatment_TrustBindingSource.DataSource = this.syphilisDBDataSet;
+            this.post_Treatment_TrustBindingSource.PositionChanged += new System.EventHandler(this.post_Treatment_TrustBindingSource_PositionChanged);
+            // 
+            // syphilisDBDataSet
+            // 
+            this.syphilisDBDataSet.DataSetName = "SyphilisDBDataSet";
+            this.syphilisDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dgvTreatmentDates
             // 
@@ -163,14 +214,14 @@
             this.TreatmentDocketNo,
             this.TreatmentRecordNum});
             this.dgvTreatmentDates.DataSource = this.treatment_DateBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTreatmentDates.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTreatmentDates.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTreatmentDates.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvTreatmentDates.Location = new System.Drawing.Point(9, 232);
             this.dgvTreatmentDates.Name = "dgvTreatmentDates";
@@ -178,7 +229,48 @@
             this.dgvTreatmentDates.RowHeadersWidth = 20;
             this.dgvTreatmentDates.Size = new System.Drawing.Size(400, 165);
             this.dgvTreatmentDates.TabIndex = 6;
+            this.dgvTreatmentDates.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvPatients_CellBeginEdit);
+            this.dgvTreatmentDates.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPatients_CellEndEdit);
             this.dgvTreatmentDates.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvTests_DefaultValuesNeeded);
+            this.dgvTreatmentDates.Enter += new System.EventHandler(this.dgvTests_Enter);
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Treatment Number";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Treatment No.";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // TreatmentDate
+            // 
+            this.TreatmentDate.DataPropertyName = "Treament Date";
+            this.TreatmentDate.HeaderText = "Treament Date";
+            this.TreatmentDate.Name = "TreatmentDate";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Comments";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Comments";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // TreatmentDocketNo
+            // 
+            this.TreatmentDocketNo.DataPropertyName = "Docket No";
+            this.TreatmentDocketNo.HeaderText = "Docket No";
+            this.TreatmentDocketNo.Name = "TreatmentDocketNo";
+            this.TreatmentDocketNo.Visible = false;
+            // 
+            // TreatmentRecordNum
+            // 
+            this.TreatmentRecordNum.DataPropertyName = "RecordID";
+            this.TreatmentRecordNum.HeaderText = "RecordID";
+            this.TreatmentRecordNum.Name = "TreatmentRecordNum";
+            this.TreatmentRecordNum.Visible = false;
+            // 
+            // treatment_DateBindingSource
+            // 
+            this.treatment_DateBindingSource.DataMember = "Treatment Date";
+            this.treatment_DateBindingSource.DataSource = this.syphilisDBDataSet;
+            this.treatment_DateBindingSource.PositionChanged += new System.EventHandler(this.treatment_DateBindingSource_PositionChanged);
             // 
             // label5
             // 
@@ -229,14 +321,14 @@
             this.TestDocketNo,
             this.TestRecordID});
             this.dgvTests.DataSource = this.testBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTests.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTests.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTests.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvTests.Location = new System.Drawing.Point(9, 31);
             this.dgvTests.Name = "dgvTests";
@@ -245,216 +337,10 @@
             this.dgvTests.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvTests.Size = new System.Drawing.Size(400, 165);
             this.dgvTests.TabIndex = 5;
+            this.dgvTests.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvPatients_CellBeginEdit);
+            this.dgvTests.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPatients_CellEndEdit);
             this.dgvTests.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvTests_DefaultValuesNeeded);
-            // 
-            // dgvPatients
-            // 
-            this.dgvPatients.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Lavender;
-            this.dgvPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvPatients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPatients.AutoGenerateColumns = false;
-            this.dgvPatients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPatients.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvPatients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DocketNo,
-            this.FName,
-            this.LName,
-            this.Telephone,
-            this.dOBDataGridViewTextBoxColumn,
-            this.ageDataGridViewTextBoxColumn,
-            this.RecordID});
-            this.dgvPatients.DataSource = this.patientBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPatients.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvPatients.GridColor = System.Drawing.Color.Gainsboro;
-            this.dgvPatients.Location = new System.Drawing.Point(0, 169);
-            this.dgvPatients.Name = "dgvPatients";
-            this.dgvPatients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPatients.Size = new System.Drawing.Size(757, 561);
-            this.dgvPatients.TabIndex = 1;
-            this.dgvPatients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPatients_CellClick);
-            // 
-            // RecordID
-            // 
-            this.RecordID.DataPropertyName = "RecordID";
-            this.RecordID.HeaderText = "RecordID";
-            this.RecordID.Name = "RecordID";
-            this.RecordID.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(142, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(467, 74);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Western Regional Health Authority\r\nSyphilis Database";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtFilter
-            // 
-            this.txtFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtFilter.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtFilter.Location = new System.Drawing.Point(85, 134);
-            this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(243, 29);
-            this.txtFilter.TabIndex = 3;
-            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(12, 146);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "PATIENTS";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Docket No";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Docket No";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "PT Date";
-            this.dataGridViewTextBoxColumn12.HeaderText = "PT Date";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "PT Result";
-            this.dataGridViewTextBoxColumn13.HeaderText = "PT Result";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Comments";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Comments";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "RecordID";
-            this.dataGridViewTextBoxColumn15.HeaderText = "RecordID";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // DateTested
-            // 
-            this.DateTested.DataPropertyName = "Date Tested";
-            this.DateTested.HeaderText = "Date";
-            this.DateTested.Name = "DateTested";
-            // 
-            // DocketNo
-            // 
-            this.DocketNo.DataPropertyName = "Docket No";
-            this.DocketNo.HeaderText = "Docket";
-            this.DocketNo.Name = "DocketNo";
-            // 
-            // FName
-            // 
-            this.FName.DataPropertyName = "First Name";
-            this.FName.HeaderText = "First Name";
-            this.FName.Name = "FName";
-            // 
-            // LName
-            // 
-            this.LName.DataPropertyName = "Last Name";
-            this.LName.HeaderText = "Last Name";
-            this.LName.Name = "LName";
-            // 
-            // Telephone
-            // 
-            this.Telephone.DataPropertyName = "Telephone";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Telephone.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Telephone.HeaderText = "Telephone";
-            this.Telephone.MaxInputLength = 15;
-            this.Telephone.Name = "Telephone";
-            // 
-            // dOBDataGridViewTextBoxColumn
-            // 
-            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
-            this.dOBDataGridViewTextBoxColumn.HeaderText = "DOB";
-            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
-            // 
-            // ageDataGridViewTextBoxColumn
-            // 
-            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
-            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
-            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
-            // 
-            // patientBindingSource
-            // 
-            this.patientBindingSource.DataMember = "Patient";
-            this.patientBindingSource.DataSource = this.syphilisDBDataSet;
-            this.patientBindingSource.PositionChanged += new System.EventHandler(this.patientBindingSource_PositionChanged);
-            // 
-            // syphilisDBDataSet
-            // 
-            this.syphilisDBDataSet.DataSetName = "SyphilisDBDataSet";
-            this.syphilisDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // POSTDate
-            // 
-            this.POSTDate.DataPropertyName = "PT Date";
-            this.POSTDate.HeaderText = "Date";
-            this.POSTDate.Name = "POSTDate";
-            // 
-            // pTResultDataGridViewTextBoxColumn
-            // 
-            this.pTResultDataGridViewTextBoxColumn.DataPropertyName = "PT Result";
-            this.pTResultDataGridViewTextBoxColumn.HeaderText = "Result";
-            this.pTResultDataGridViewTextBoxColumn.Name = "pTResultDataGridViewTextBoxColumn";
-            // 
-            // commentsDataGridViewTextBoxColumn
-            // 
-            this.commentsDataGridViewTextBoxColumn.DataPropertyName = "Comments";
-            this.commentsDataGridViewTextBoxColumn.HeaderText = "Comments";
-            this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
-            // 
-            // POSTDocketNo
-            // 
-            this.POSTDocketNo.DataPropertyName = "Docket No";
-            this.POSTDocketNo.HeaderText = "Docket No";
-            this.POSTDocketNo.Name = "POSTDocketNo";
-            this.POSTDocketNo.Visible = false;
-            // 
-            // POSTRecordID
-            // 
-            this.POSTRecordID.DataPropertyName = "RecordID";
-            this.POSTRecordID.HeaderText = "RecordID";
-            this.POSTRecordID.Name = "POSTRecordID";
-            this.POSTRecordID.Visible = false;
-            // 
-            // post_Treatment_TrustBindingSource
-            // 
-            this.post_Treatment_TrustBindingSource.DataMember = "Post Treatment Trust";
-            this.post_Treatment_TrustBindingSource.DataSource = this.syphilisDBDataSet;
-            this.post_Treatment_TrustBindingSource.PositionChanged += new System.EventHandler(this.post_Treatment_TrustBindingSource_PositionChanged);
-            // 
-            // treatment_DateBindingSource
-            // 
-            this.treatment_DateBindingSource.DataMember = "Treatment Date";
-            this.treatment_DateBindingSource.DataSource = this.syphilisDBDataSet;
-            this.treatment_DateBindingSource.PositionChanged += new System.EventHandler(this.treatment_DateBindingSource_PositionChanged);
+            this.dgvTests.Enter += new System.EventHandler(this.dgvTests_Enter);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -496,6 +382,15 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Visible = false;
             // 
+            // DateTested
+            // 
+            this.DateTested.DataPropertyName = "Date Tested";
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            this.DateTested.DefaultCellStyle = dataGridViewCellStyle4;
+            this.DateTested.HeaderText = "Date";
+            this.DateTested.Name = "DateTested";
+            // 
             // TestDocketNo
             // 
             this.TestDocketNo.DataPropertyName = "Docket No";
@@ -515,6 +410,165 @@
             this.testBindingSource.DataMember = "Test";
             this.testBindingSource.DataSource = this.syphilisDBDataSet;
             this.testBindingSource.PositionChanged += new System.EventHandler(this.testBindingSource_PositionChanged);
+            // 
+            // dgvPatients
+            // 
+            this.dgvPatients.AllowUserToResizeRows = false;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Lavender;
+            this.dgvPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvPatients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPatients.AutoGenerateColumns = false;
+            this.dgvPatients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPatients.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvPatients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DocketNo,
+            this.FName,
+            this.LName,
+            this.Telephone,
+            this.dOBDataGridViewTextBoxColumn,
+            this.ageDataGridViewTextBoxColumn,
+            this.RecordID});
+            this.dgvPatients.DataSource = this.patientBindingSource;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPatients.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvPatients.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvPatients.Location = new System.Drawing.Point(0, 169);
+            this.dgvPatients.Name = "dgvPatients";
+            this.dgvPatients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPatients.Size = new System.Drawing.Size(757, 561);
+            this.dgvPatients.TabIndex = 1;
+            this.dgvPatients.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvPatients_CellBeginEdit);
+            this.dgvPatients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPatients_CellClick);
+            this.dgvPatients.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPatients_CellEndEdit);
+            // 
+            // DocketNo
+            // 
+            this.DocketNo.DataPropertyName = "Docket No";
+            this.DocketNo.HeaderText = "Docket";
+            this.DocketNo.Name = "DocketNo";
+            // 
+            // FName
+            // 
+            this.FName.DataPropertyName = "First Name";
+            this.FName.HeaderText = "First Name";
+            this.FName.Name = "FName";
+            // 
+            // LName
+            // 
+            this.LName.DataPropertyName = "Last Name";
+            this.LName.HeaderText = "Last Name";
+            this.LName.Name = "LName";
+            // 
+            // Telephone
+            // 
+            this.Telephone.DataPropertyName = "Telephone";
+            dataGridViewCellStyle7.Format = "###-####";
+            dataGridViewCellStyle7.NullValue = "-";
+            this.Telephone.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Telephone.HeaderText = "Telephone";
+            this.Telephone.MaxInputLength = 15;
+            this.Telephone.Name = "Telephone";
+            // 
+            // dOBDataGridViewTextBoxColumn
+            // 
+            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
+            this.dOBDataGridViewTextBoxColumn.HeaderText = "DOB";
+            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
+            // 
+            // ageDataGridViewTextBoxColumn
+            // 
+            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
+            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
+            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            // 
+            // RecordID
+            // 
+            this.RecordID.DataPropertyName = "RecordID";
+            this.RecordID.HeaderText = "RecordID";
+            this.RecordID.Name = "RecordID";
+            this.RecordID.Visible = false;
+            // 
+            // patientBindingSource
+            // 
+            this.patientBindingSource.DataMember = "Patient";
+            this.patientBindingSource.DataSource = this.syphilisDBDataSet;
+            this.patientBindingSource.PositionChanged += new System.EventHandler(this.patientBindingSource_PositionChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(142, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(467, 74);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Western Regional Health Authority\r\nSyphilis Database";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtFilter
+            // 
+            this.txtFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtFilter.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtFilter.Location = new System.Drawing.Point(85, 134);
+            this.txtFilter.Name = "txtFilter";
+            this.txtFilter.Size = new System.Drawing.Size(243, 29);
+            this.txtFilter.TabIndex = 3;
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(12, 140);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "PATIENTS";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Docket No";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Docket No";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "PT Date";
+            this.dataGridViewTextBoxColumn12.HeaderText = "PT Date";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "PT Result";
+            this.dataGridViewTextBoxColumn13.HeaderText = "PT Result";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Comments";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Comments";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "RecordID";
+            this.dataGridViewTextBoxColumn15.HeaderText = "RecordID";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
             // patientTableAdapter
             // 
@@ -542,43 +596,12 @@
             // 
             this.post_Treatment_TrustTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Treatment Number";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Treatment No.";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // TreatmentDate
-            // 
-            this.TreatmentDate.DataPropertyName = "Treament Date";
-            this.TreatmentDate.HeaderText = "Treament Date";
-            this.TreatmentDate.Name = "TreatmentDate";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Comments";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Comments";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // TreatmentDocketNo
-            // 
-            this.TreatmentDocketNo.DataPropertyName = "Docket No";
-            this.TreatmentDocketNo.HeaderText = "Docket No";
-            this.TreatmentDocketNo.Name = "TreatmentDocketNo";
-            this.TreatmentDocketNo.Visible = false;
-            // 
-            // TreatmentRecordNum
-            // 
-            this.TreatmentRecordNum.DataPropertyName = "RecordID";
-            this.TreatmentRecordNum.HeaderText = "RecordID";
-            this.TreatmentRecordNum.Name = "TreatmentRecordNum";
-            this.TreatmentRecordNum.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackgroundImage = global::SyphilisRegister.Properties.Resources.spiration_light;
             this.ClientSize = new System.Drawing.Size(1176, 730);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtFilter);
@@ -595,14 +618,14 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPostTreatmentTrust)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.post_Treatment_TrustBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syphilisDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTreatmentDates)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treatment_DateBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.syphilisDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.post_Treatment_TrustBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treatment_DateBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -618,13 +641,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFilter;
         private System.Windows.Forms.DataGridViewTextBoxColumn addessDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DocketNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RecordID;
         private System.Windows.Forms.BindingSource testBindingSource;
         private SyphilisDBDataSetTableAdapters.TestTableAdapter testTableAdapter;
         private SyphilisDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
@@ -644,6 +660,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TreatmentDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TreatmentDocketNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TreatmentRecordNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DocketNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RecordID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn POSTDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pTResultDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn commentsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn POSTDocketNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn POSTRecordID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -653,16 +686,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DateTested;
         private System.Windows.Forms.DataGridViewTextBoxColumn TestDocketNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn TestRecordID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn POSTDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pTResultDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn commentsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn POSTDocketNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn POSTRecordID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TreatmentDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TreatmentDocketNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TreatmentRecordNum;
     }
 }
 
