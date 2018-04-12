@@ -831,6 +831,8 @@ namespace SyphilisRegister {
             
             private global::System.Data.DataColumn columnRecordID;
             
+            private global::System.Data.DataColumn columnPT_Trust_ID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public Post_Treatment_TrustDataTable() {
@@ -906,6 +908,14 @@ namespace SyphilisRegister {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PT_Trust_IDColumn {
+                get {
+                    return this.columnPT_Trust_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -948,6 +958,7 @@ namespace SyphilisRegister {
                         PT_Date,
                         PT_Result,
                         Comments,
+                        null,
                         null};
                 if ((parentPatientRowByFK_Post_Treatment_Trust_Patient != null)) {
                     columnValuesArray[0] = parentPatientRowByFK_Post_Treatment_Trust_Patient[0];
@@ -958,6 +969,13 @@ namespace SyphilisRegister {
                 rowPost_Treatment_TrustRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPost_Treatment_TrustRow);
                 return rowPost_Treatment_TrustRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Post_Treatment_TrustRow FindByPT_Trust_ID(int PT_Trust_ID) {
+                return ((Post_Treatment_TrustRow)(this.Rows.Find(new object[] {
+                            PT_Trust_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -982,6 +1000,7 @@ namespace SyphilisRegister {
                 this.columnPT_Result = base.Columns["PT Result"];
                 this.columnComments = base.Columns["Comments"];
                 this.columnRecordID = base.Columns["RecordID"];
+                this.columnPT_Trust_ID = base.Columns["PT Trust ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -997,11 +1016,20 @@ namespace SyphilisRegister {
                 base.Columns.Add(this.columnComments);
                 this.columnRecordID = new global::System.Data.DataColumn("RecordID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRecordID);
+                this.columnPT_Trust_ID = new global::System.Data.DataColumn("PT Trust ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPT_Trust_ID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnPT_Trust_ID}, true));
                 this.columnDocket_No.AllowDBNull = false;
                 this.columnPT_Date.AllowDBNull = false;
                 this.columnPT_Result.AllowDBNull = false;
                 this.columnPT_Result.MaxLength = 300;
                 this.columnComments.MaxLength = 500;
+                this.columnPT_Trust_ID.AutoIncrement = true;
+                this.columnPT_Trust_ID.AutoIncrementSeed = 1;
+                this.columnPT_Trust_ID.AllowDBNull = false;
+                this.columnPT_Trust_ID.ReadOnly = true;
+                this.columnPT_Trust_ID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1530,6 +1558,8 @@ namespace SyphilisRegister {
             
             private global::System.Data.DataColumn columnRecordID;
             
+            private global::System.Data.DataColumn columnTreatment_ID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public Treatment_DateDataTable() {
@@ -1605,6 +1635,14 @@ namespace SyphilisRegister {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Treatment_IDColumn {
+                get {
+                    return this.columnTreatment_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1647,6 +1685,7 @@ namespace SyphilisRegister {
                         Treament_Date,
                         Treatment_Number,
                         Comments,
+                        null,
                         null};
                 if ((parentPatientRowByFK_Treatment_Date_Patient != null)) {
                     columnValuesArray[0] = parentPatientRowByFK_Treatment_Date_Patient[0];
@@ -1657,6 +1696,13 @@ namespace SyphilisRegister {
                 rowTreatment_DateRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTreatment_DateRow);
                 return rowTreatment_DateRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Treatment_DateRow FindByTreatment_ID(int Treatment_ID) {
+                return ((Treatment_DateRow)(this.Rows.Find(new object[] {
+                            Treatment_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1681,6 +1727,7 @@ namespace SyphilisRegister {
                 this.columnTreatment_Number = base.Columns["Treatment Number"];
                 this.columnComments = base.Columns["Comments"];
                 this.columnRecordID = base.Columns["RecordID"];
+                this.columnTreatment_ID = base.Columns["Treatment ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1696,10 +1743,19 @@ namespace SyphilisRegister {
                 base.Columns.Add(this.columnComments);
                 this.columnRecordID = new global::System.Data.DataColumn("RecordID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRecordID);
+                this.columnTreatment_ID = new global::System.Data.DataColumn("Treatment ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTreatment_ID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTreatment_ID}, true));
                 this.columnDocket_No.AllowDBNull = false;
                 this.columnTreament_Date.AllowDBNull = false;
                 this.columnTreatment_Number.AllowDBNull = false;
                 this.columnComments.MaxLength = 500;
+                this.columnTreatment_ID.AutoIncrement = true;
+                this.columnTreatment_ID.AutoIncrementSeed = 1;
+                this.columnTreatment_ID.AllowDBNull = false;
+                this.columnTreatment_ID.ReadOnly = true;
+                this.columnTreatment_ID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2440,6 +2496,17 @@ namespace SyphilisRegister {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int PT_Trust_ID {
+                get {
+                    return ((int)(this[this.tablePost_Treatment_Trust.PT_Trust_IDColumn]));
+                }
+                set {
+                    this[this.tablePost_Treatment_Trust.PT_Trust_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public PatientRow PatientRow {
                 get {
                     return ((PatientRow)(this.GetParentRow(this.Table.ParentRelations["FK_Post Treatment Trust_Patient"])));
@@ -2765,6 +2832,17 @@ namespace SyphilisRegister {
                 }
                 set {
                     this[this.tableTreatment_Date.RecordIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Treatment_ID {
+                get {
+                    return ((int)(this[this.tableTreatment_Date.Treatment_IDColumn]));
+                }
+                set {
+                    this[this.tableTreatment_Date.Treatment_IDColumn] = value;
                 }
             }
             
@@ -3556,17 +3634,38 @@ SELECT [Docket No], [First Name], [Last Name], Telephone, DOB, Age, RecordID, Ad
             tableMapping.ColumnMappings.Add("PT Result", "PT Result");
             tableMapping.ColumnMappings.Add("Comments", "Comments");
             tableMapping.ColumnMappings.Add("RecordID", "RecordID");
+            tableMapping.ColumnMappings.Add("PT Trust ID", "PT Trust ID");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Post Treatment Trust]\r\nWHERE        ([PT Trust ID] = @Original_PT_Tr" +
+                "ust_ID)";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PT_Trust_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PT Trust ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Post Treatment Trust] ([Docket No], [PT Date], [PT Result], [Comment" +
-                "s], [RecordID]) VALUES (@Docket_No, @PT_Date, @PT_Result, @Comments, @RecordID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Post Treatment Trust] ([Docket No], [PT Date], [PT Result], [Comments], [RecordID]) VALUES (@Docket_No, @PT_Date, @PT_Result, @Comments, @RecordID);
+SELECT [Docket No], [PT Date], [PT Result], Comments, RecordID, [PT Trust ID] FROM [Post Treatment Trust] WHERE ([PT Trust ID] = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Docket_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Docket No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PT_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PT Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PT_Result", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PT Result", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RecordID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RecordID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE       [Post Treatment Trust]
+SET                [Docket No] = @Docket_No, [PT Date] = @PT_Date, [PT Result] = @PT_Result, Comments = @Comments, RecordID = @RecordID
+WHERE        ([PT Trust ID] = @Original_PT_Trust_ID); 
+SELECT [Docket No], [PT Date], [PT Result], Comments, RecordID, [PT Trust ID] FROM [Post Treatment Trust] WHERE ([PT Trust ID] = @PT_Trust_ID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Docket_No", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Docket No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PT_Date", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "PT Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PT_Result", global::System.Data.SqlDbType.VarChar, 300, global::System.Data.ParameterDirection.Input, 0, 0, "PT Result", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RecordID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RecordID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PT_Trust_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PT Trust ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PT_Trust_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PT Trust ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3582,13 +3681,13 @@ SELECT [Docket No], [First Name], [Last Name], Telephone, DOB, Age, RecordID, Ad
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Docket No], [PT Date], [PT Result], Comments, RecordID FROM [Post Treatme" +
-                "nt Trust]";
+            this._commandCollection[0].CommandText = "SELECT [Docket No], [PT Date], [PT Result], Comments, RecordID, [PT Trust ID] FRO" +
+                "M [Post Treatment Trust]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        [Docket No], [PT Date], [PT Result], Comments, RecordID\r\nFROM      " +
-                "      [Post Treatment Trust]\r\nWHERE        (RecordID = @RecordID)";
+            this._commandCollection[1].CommandText = "SELECT [Docket No], [PT Date], [PT Result], Comments, RecordID, [PT Trust ID] FRO" +
+                "M [Post Treatment Trust] WHERE (RecordID = @RecordID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RecordID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RecordID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -3663,9 +3762,36 @@ SELECT [Docket No], [First Name], [Last Name], Telephone, DOB, Age, RecordID, Ad
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_PT_Trust_ID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_PT_Trust_ID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Docket_No, System.DateTime PT_Date, string PT_Result, string Comments, global::System.Nullable<int> RecordID) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Docket_No));
+        public virtual int Insert(global::System.Nullable<int> Docket_No, System.DateTime PT_Date, string PT_Result, string Comments, int RecordID) {
+            if ((Docket_No.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Docket_No.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(PT_Date));
             if ((PT_Result == null)) {
                 throw new global::System.ArgumentNullException("PT_Result");
@@ -3679,12 +3805,7 @@ SELECT [Docket No], [First Name], [Last Name], Telephone, DOB, Age, RecordID, Ad
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Comments));
             }
-            if ((RecordID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(RecordID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(RecordID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3697,6 +3818,49 @@ SELECT [Docket No], [First Name], [Last Name], Telephone, DOB, Age, RecordID, Ad
             finally {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> Docket_No, System.DateTime PT_Date, string PT_Result, string Comments, int RecordID, int Original_PT_Trust_ID, int PT_Trust_ID) {
+            if ((Docket_No.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Docket_No.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(PT_Date));
+            if ((PT_Result == null)) {
+                throw new global::System.ArgumentNullException("PT_Result");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(PT_Result));
+            }
+            if ((Comments == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Comments));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(RecordID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_PT_Trust_ID));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(PT_Trust_ID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
         }
@@ -4235,21 +4399,18 @@ SELECT [Test ID], Parish, [Test Site], [SD Bioline], TRUST, Comments, [Docket No
             tableMapping.ColumnMappings.Add("Treatment Number", "Treatment Number");
             tableMapping.ColumnMappings.Add("Comments", "Comments");
             tableMapping.ColumnMappings.Add("RecordID", "RecordID");
+            tableMapping.ColumnMappings.Add("Treatment ID", "Treatment ID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Post Treatment Trust]\r\nWHERE        ([PT Date] = @PT_Date) AND ([PT " +
-                "Result] = @PT_Result) AND (Comments = @Comments) AND (RecordID = @RecordID)";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Treatment Date]\r\nWHERE        ([Treatment ID] = @Original_Treatment_" +
+                "ID)";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PT_Date", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "PT Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PT_Result", global::System.Data.SqlDbType.VarChar, 300, global::System.Data.ParameterDirection.Input, 0, 0, "PT Result", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RecordID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RecordID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Treatment_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Treatment ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Treatment Date] ([Docket No], [Treament Date], [Treatment Number], [" +
-                "Comments], [RecordID]) VALUES (@Docket_No, @Treament_Date, @Treatment_Number, @C" +
-                "omments, @RecordID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Treatment Date] ([Docket No], [Treament Date], [Treatment Number], [Comments], [RecordID]) VALUES (@Docket_No, @Treament_Date, @Treatment_Number, @Comments, @RecordID);
+SELECT [Docket No], [Treament Date], [Treatment Number], Comments, RecordID, [Treatment ID] FROM [Treatment Date] WHERE ([Treatment ID] = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Docket_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Docket No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Treament_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Treament Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4258,17 +4419,18 @@ SELECT [Test ID], Parish, [Test Site], [SD Bioline], TRUST, Comments, [Docket No
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RecordID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RecordID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE       [Post Treatment Trust]
-SET                [PT Date] = @PT_Date, [PT Result] = @PT_Result, Comments = @Comments
-WHERE        ([PT Date] = @Original_PT_Date) AND ([PT Result] = @Original_PT_Result) AND (Comments = @Original_Comments) AND (RecordID = @Original_RecordID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE       [Treatment Date]
+SET                [Docket No] = @Docket_No, [Treament Date] = @Treament_Date, [Treatment Number] = @Treatment_Number, Comments = @Comments, RecordID = @RecordID
+WHERE        ([Treatment ID] = @Original_Treatment_ID); 
+SELECT [Docket No], [Treament Date], [Treatment Number], Comments, RecordID, [Treatment ID] FROM [Treatment Date] WHERE ([Treatment ID] = @Treatment_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PT_Date", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "PT Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PT_Result", global::System.Data.SqlDbType.VarChar, 300, global::System.Data.ParameterDirection.Input, 0, 0, "PT Result", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Docket_No", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Docket No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Treament_Date", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Treament Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Treatment_Number", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Treatment Number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PT_Date", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "PT Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PT_Result", global::System.Data.SqlDbType.VarChar, 300, global::System.Data.ParameterDirection.Input, 0, 0, "PT Result", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Comments", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RecordID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RecordID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RecordID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RecordID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Treatment_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Treatment ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Treatment_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Treatment ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4284,13 +4446,13 @@ WHERE        ([PT Date] = @Original_PT_Date) AND ([PT Result] = @Original_PT_Res
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Docket No], [Treament Date], [Treatment Number], Comments, RecordID FROM " +
-                "[Treatment Date]";
+            this._commandCollection[0].CommandText = "SELECT [Docket No], [Treament Date], [Treatment Number], Comments, RecordID, [Tre" +
+                "atment ID] FROM [Treatment Date]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        [Docket No], [Treament Date], [Treatment Number], Comments, RecordI" +
-                "D\r\nFROM            [Treatment Date]\r\nWHERE        (RecordID = @RecordID)";
+            this._commandCollection[1].CommandText = "SELECT [Docket No], [Treament Date], [Treatment Number], Comments, RecordID, [Tre" +
+                "atment ID] FROM [Treatment Date] WHERE (RecordID = @RecordID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RecordID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RecordID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -4366,21 +4528,8 @@ WHERE        ([PT Date] = @Original_PT_Date) AND ([PT Result] = @Original_PT_Res
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(System.DateTime PT_Date, string PT_Result, string Comments, int RecordID) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((System.DateTime)(PT_Date));
-            if ((PT_Result == null)) {
-                throw new global::System.ArgumentNullException("PT_Result");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(PT_Result));
-            }
-            if ((Comments == null)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Comments));
-            }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(RecordID));
+        public virtual int Delete(int Original_Treatment_ID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Treatment_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4401,8 +4550,13 @@ WHERE        ([PT Date] = @Original_PT_Date) AND ([PT Result] = @Original_PT_Res
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Docket_No, System.DateTime Treament_Date, int Treatment_Number, string Comments, global::System.Nullable<int> RecordID) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Docket_No));
+        public virtual int Insert(global::System.Nullable<int> Docket_No, System.DateTime Treament_Date, int Treatment_Number, string Comments, int RecordID) {
+            if ((Docket_No.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Docket_No.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(Treament_Date));
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Treatment_Number));
             if ((Comments == null)) {
@@ -4411,12 +4565,7 @@ WHERE        ([PT Date] = @Original_PT_Date) AND ([PT Result] = @Original_PT_Res
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Comments));
             }
-            if ((RecordID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(RecordID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(RecordID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4437,34 +4586,24 @@ WHERE        ([PT Date] = @Original_PT_Date) AND ([PT Result] = @Original_PT_Res
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime PT_Date, string PT_Result, string Comments, System.DateTime Original_PT_Date, string Original_PT_Result, string Original_Comments, int Original_RecordID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(PT_Date));
-            if ((PT_Result == null)) {
-                throw new global::System.ArgumentNullException("PT_Result");
+        public virtual int Update(global::System.Nullable<int> Docket_No, System.DateTime Treament_Date, int Treatment_Number, string Comments, int RecordID, int Original_Treatment_ID, int Treatment_ID) {
+            if ((Docket_No.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Docket_No.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(PT_Result));
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(Treament_Date));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Treatment_Number));
             if ((Comments == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Comments));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Comments));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Original_PT_Date));
-            if ((Original_PT_Result == null)) {
-                throw new global::System.ArgumentNullException("Original_PT_Result");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_PT_Result));
-            }
-            if ((Original_Comments == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Comments));
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_RecordID));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(RecordID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Treatment_ID));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Treatment_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
