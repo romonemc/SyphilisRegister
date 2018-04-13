@@ -8,6 +8,7 @@ namespace SyphilisRegister
     {
         int RID;
         int DNO;
+        string Parish;
 
         public Form1()
         {
@@ -16,6 +17,19 @@ namespace SyphilisRegister
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Login lgnfrm = new Login();
+            lgnfrm.isLoggedIn = false;
+            lgnfrm.ShowDialog();
+
+            lblParish.Text = lgnfrm.Parish;
+
+            if (!lgnfrm.isLoggedIn)
+            {
+                this.Close();
+                Application.Exit();
+                return;
+            }
+
             this.patientTableAdapter.Fill(this.syphilisDBDataSet.Patient);
         }
 
