@@ -8,7 +8,6 @@ namespace SyphilisRegister
     {
         int RID;
         int DNO;
-        string Parish;
 
         public Form1()
         {
@@ -21,13 +20,15 @@ namespace SyphilisRegister
             lgnfrm.isLoggedIn = false;
             lgnfrm.ShowDialog();
 
-            lblParish.Text = lgnfrm.Parish;
-
             if (!lgnfrm.isLoggedIn)
             {
                 this.Close();
                 Application.Exit();
                 return;
+            }
+            else
+            {
+                lblParish.Text = lgnfrm.Parish.ToUpper();
             }
 
             this.patientTableAdapter.Fill(this.syphilisDBDataSet.Patient);
@@ -125,7 +126,16 @@ namespace SyphilisRegister
         private void testBindingSource_PositionChanged(object sender, EventArgs e)
         {
             BindingSource tBindingSource = (BindingSource)sender;
-            DataRow thisRow = ((DataRowView)tBindingSource.Current).Row;
+            DataRow thisRow = null;
+
+            if (tBindingSource.Current != null)
+            {
+                thisRow = ((DataRowView)tBindingSource.Current).Row;
+            }
+            else
+            {
+                return;
+            }
 
             if (thisRow == LastTestRow)
             {
@@ -146,7 +156,16 @@ namespace SyphilisRegister
         private void treatment_DateBindingSource_PositionChanged(object sender, EventArgs e)
         {
             BindingSource treatBindingSource = (BindingSource)sender;
-            DataRow thisRow = ((DataRowView)treatBindingSource.Current).Row;
+            DataRow thisRow;
+
+            if (treatBindingSource.Current != null)
+            {
+                thisRow = ((DataRowView)treatBindingSource.Current).Row;
+            }
+            else
+            {
+                return;
+            }
 
             if (thisRow == LastTreatmentRow)
             {
@@ -167,7 +186,16 @@ namespace SyphilisRegister
         private void post_Treatment_TrustBindingSource_PositionChanged(object sender, EventArgs e)
         {
             BindingSource postBindingSource = (BindingSource)sender;
-            DataRow thisRow = ((DataRowView)postBindingSource.Current).Row;
+            DataRow thisRow = null;
+
+            if (postBindingSource.Current != null)
+            {
+                thisRow = ((DataRowView)postBindingSource.Current).Row;
+            }
+            else
+            {
+                return;
+            }
 
             if (thisRow == LastPOSTRow)
             {

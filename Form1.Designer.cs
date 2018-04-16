@@ -147,11 +147,11 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPostTreatmentTrust.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPostTreatmentTrust.GridColor = System.Drawing.Color.Gainsboro;
-            this.dgvPostTreatmentTrust.Location = new System.Drawing.Point(9, 432);
+            this.dgvPostTreatmentTrust.Location = new System.Drawing.Point(9, 517);
             this.dgvPostTreatmentTrust.Name = "dgvPostTreatmentTrust";
             this.dgvPostTreatmentTrust.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvPostTreatmentTrust.RowHeadersWidth = 20;
-            this.dgvPostTreatmentTrust.Size = new System.Drawing.Size(400, 165);
+            this.dgvPostTreatmentTrust.Size = new System.Drawing.Size(400, 200);
             this.dgvPostTreatmentTrust.TabIndex = 6;
             this.dgvPostTreatmentTrust.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvPatients_CellBeginEdit);
             this.dgvPostTreatmentTrust.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPatients_CellEndEdit);
@@ -237,11 +237,11 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTreatmentDates.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTreatmentDates.GridColor = System.Drawing.Color.Gainsboro;
-            this.dgvTreatmentDates.Location = new System.Drawing.Point(9, 232);
+            this.dgvTreatmentDates.Location = new System.Drawing.Point(9, 269);
             this.dgvTreatmentDates.Name = "dgvTreatmentDates";
             this.dgvTreatmentDates.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvTreatmentDates.RowHeadersWidth = 20;
-            this.dgvTreatmentDates.Size = new System.Drawing.Size(400, 165);
+            this.dgvTreatmentDates.Size = new System.Drawing.Size(400, 200);
             this.dgvTreatmentDates.TabIndex = 6;
             this.dgvTreatmentDates.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvPatients_CellBeginEdit);
             this.dgvTreatmentDates.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPatients_CellEndEdit);
@@ -297,8 +297,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.DimGray;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(6, 412);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(9, 497);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(165, 17);
             this.label5.TabIndex = 6;
@@ -307,8 +309,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.DimGray;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(6, 212);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(10, 249);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 17);
             this.label4.TabIndex = 6;
@@ -317,8 +321,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.DimGray;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(6, 11);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(9, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 6;
@@ -352,12 +358,12 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTests.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTests.GridColor = System.Drawing.Color.Gainsboro;
-            this.dgvTests.Location = new System.Drawing.Point(9, 31);
+            this.dgvTests.Location = new System.Drawing.Point(9, 29);
             this.dgvTests.Name = "dgvTests";
             this.dgvTests.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvTests.RowHeadersWidth = 20;
             this.dgvTests.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvTests.Size = new System.Drawing.Size(400, 165);
+            this.dgvTests.Size = new System.Drawing.Size(400, 200);
             this.dgvTests.TabIndex = 5;
             this.dgvTests.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvPatients_CellBeginEdit);
             this.dgvTests.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPatients_CellEndEdit);
@@ -542,9 +548,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(186, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(374, 60);
+            this.label1.Size = new System.Drawing.Size(451, 60);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Western Regional Health Authority\r\nSyphilis Database";
+            this.label1.Text = "WESTERN REGIONAL HEALTH AUTHORITY\r\nSYPHILIS DATABASE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtFilter
@@ -561,8 +567,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(12, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 17);
@@ -631,11 +638,11 @@
             this.lblParish.AutoSize = true;
             this.lblParish.BackColor = System.Drawing.Color.Transparent;
             this.lblParish.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblParish.Location = new System.Drawing.Point(327, 68);
+            this.lblParish.Location = new System.Drawing.Point(362, 64);
             this.lblParish.Name = "lblParish";
-            this.lblParish.Size = new System.Drawing.Size(76, 30);
+            this.lblParish.Size = new System.Drawing.Size(91, 30);
             this.lblParish.TabIndex = 7;
-            this.lblParish.Text = "label6";
+            this.lblParish.Text = "PARISH";
             this.lblParish.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
